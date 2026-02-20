@@ -1,99 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Charles Zufan | Portfolio</title>
+<style>
+  html, body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+    color:#e5e7eb;
+    text-align:center;
+  }
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #0b1220, #020617);
-      color:#e5e7eb;
-      text-align:center;
-    }
+  body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
 
-    .wrap{
-      max-width:900px;
-      margin:0 auto;
-      padding:70px 20px 50px;
-    }
+  .wrap{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+  }
 
-    h1{
-      font-size:64px;
-      margin:0 0 10px;
-      letter-spacing:1px;
-      color:#22c55e;
-    }
+  h1{
+    font-size:64px;
+    margin-bottom:10px;
+    color:#60a5fa;
+  }
 
-    .tagline{
-      font-size:22px;
-      color:#94a3b8;
-      margin-bottom:35px;
-    }
+  .tagline{
+    font-size:22px;
+    color:#94a3b8;
+    margin-bottom:35px;
+  }
 
-    .btn{
-      display:inline-block;
-      padding:14px 26px;
-      border-radius:12px;
-      background:#22c55e;
-      color:#04120a;
-      text-decoration:none;
-      font-weight:bold;
-      font-size:18px;
-      box-shadow:0 10px 25px rgba(34,197,94,.25);
-      transition:.2s;
-    }
-    .btn:hover{ transform:translateY(-2px); background:#16a34a; }
+  .btn{
+    display:inline-block;
+    padding:14px 26px;
+    border-radius:12px;
+    background:#60a5fa;
+    color:#020617;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:0 10px 25px rgba(96,165,250,.25);
+    transition:.2s;
+  }
 
-    .card{
-      margin-top:55px;
-      padding:28px;
-      border-radius:18px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      text-align:left;
-    }
+  .btn:hover{
+    transform:translateY(-2px);
+    background:#3b82f6;
+  }
 
-    .card h2{
-      margin:0 0 12px;
-      color:#22c55e;
-      font-size:28px;
-    }
+  .card{
+    margin-top:45px;
+    padding:28px;
+    border-radius:18px;
+    background: rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+  }
 
-    .card p{
-      margin:0;
-      font-size:20px;
-      line-height:1.6;
-      color:#cbd5e1;
-    }
+  .card h2{
+    margin-bottom:12px;
+    color:#60a5fa;
+  }
 
-    footer{
-      margin-top:40px;
-      color:#64748b;
-      font-size:16px;
-    }
-  </style>
-</head>
+  .card p{
+    font-size:20px;
+    line-height:1.6;
+    color:#cbd5e1;
+  }
 
-<body>
-  <div class="wrap">
-    <h1>Charles Zufan</h1>
-    <div class="tagline">Computer Science • Backend • Track Athlete</div>
-
-    <a class="btn" href="https://github.com/czoof" target="_blank">My GitHub Repositories</a>
-
-    <div class="card">
-      <h2>About Me</h2>
-      <p>
-        I’m a Senior Computer Science student at Saint Xavier University graduating May 2026.
-        I enjoy building software, working with backend systems and databases, and solving complex problems.
-        I’m also a National Track &amp; Field Scholar-Athlete, and I’m focused on gaining hands-on experience
-        building real-world applications as I start my career in software development.
-      </p>
-    </div>
-
-    <footer>© 2026 Charles Zufan</footer>
-  </div>
-</body>
-</html>
+  footer{
+    margin-top:40px;
+    color:#64748b;
+    font-size:16px;
+  }
+</style>

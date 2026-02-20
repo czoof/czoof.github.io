@@ -1,113 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Charles Zufan Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Charles Zufan | Portfolio</title>
 
   <style>
-
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #e2e8f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #0b1220, #020617);
+      color:#e5e7eb;
+      text-align:center;
     }
 
-    .container {
-      margin-top: 60px;
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:70px 20px 50px;
     }
 
-    h1 {
-      font-size: 70px;
-      margin-bottom: 10px;
-      color: #38bdf8;
+    h1{
+      font-size:64px;
+      margin:0 0 10px;
+      letter-spacing:1px;
+      color:#22c55e;
     }
 
-    .subtitle {
-      font-size: 26px;
-      color: #94a3b8;
-      margin-bottom: 40px;
+    .tagline{
+      font-size:22px;
+      color:#94a3b8;
+      margin-bottom:35px;
     }
 
-    .github-button {
-      display: inline-block;
-      padding: 16px 30px;
-      background: #38bdf8;
-      color: #0f172a;
-      text-decoration: none;
-      font-size: 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
+    .btn{
+      display:inline-block;
+      padding:14px 26px;
+      border-radius:12px;
+      background:#22c55e;
+      color:#04120a;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:18px;
+      box-shadow:0 10px 25px rgba(34,197,94,.25);
+      transition:.2s;
+    }
+    .btn:hover{ transform:translateY(-2px); background:#16a34a; }
+
+    .card{
+      margin-top:55px;
+      padding:28px;
+      border-radius:18px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      text-align:left;
     }
 
-    .github-button:hover {
-      background: #0ea5e9;
-      transform: scale(1.05);
+    .card h2{
+      margin:0 0 12px;
+      color:#22c55e;
+      font-size:28px;
     }
 
-    .about-section {
-      margin-top: 70px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+    .card p{
+      margin:0;
+      font-size:20px;
+      line-height:1.6;
+      color:#cbd5e1;
     }
 
-    .about-title {
-      font-size: 36px;
-      margin-bottom: 15px;
-      color: #38bdf8;
+    footer{
+      margin-top:40px;
+      color:#64748b;
+      font-size:16px;
     }
-
-    .about-text {
-      font-size: 22px;
-      line-height: 1.6;
-      color: #cbd5e1;
-    }
-
-    .footer {
-      margin-top: 80px;
-      font-size: 18px;
-      color: #64748b;
-    }
-
   </style>
-
 </head>
 
 <body>
+  <div class="wrap">
+    <h1>Charles Zufan</h1>
+    <div class="tagline">Computer Science • Backend • Track Athlete</div>
 
-<div class="container">
+    <a class="btn" href="https://github.com/czoof" target="_blank">My GitHub Repositories</a>
 
-  <h1>Charles Zufan</h1>
-
-  <div class="subtitle">
-    Computer Science Student • Backend Developer • Track Athlete
-  </div>
-
-  <a class="github-button" href="https://github.com/czoof" target="_blank">
-    View My GitHub Projects
-  </a>
-
-  <div class="about-section">
-
-    <div class="about-title">About Me</div>
-
-    <div class="about-text">
-      I am a Senior Computer Science student at Saint Xavier University graduating May 2026.
-      I focus on backend development, databases, and building full-stack applications.
-      I enjoy solving complex problems, learning new technologies, and continuously improving my skills.
-      My goal is to become a professional software engineer and contribute to meaningful projects.
+    <div class="card">
+      <h2>About Me</h2>
+      <p>
+        I’m a Senior Computer Science student at Saint Xavier University graduating May 2026.
+        I enjoy building software, working with backend systems and databases, and solving complex problems.
+        I’m also a National Track &amp; Field Scholar-Athlete, and I’m focused on gaining hands-on experience
+        building real-world applications as I start my career in software development.
+      </p>
     </div>
 
+    <footer>© 2026 Charles Zufan</footer>
   </div>
-
-  <div class="footer">
-    © 2026 Charles Zufan
-  </div>
-
-</div>
-
 </body>
 </html>

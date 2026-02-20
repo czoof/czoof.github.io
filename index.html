@@ -1,79 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Charles Zufan Portfolio</title>
+
 <style>
-  html, body{
-    margin:0;
-    padding:0;
-    min-height:100vh;
-    height:100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
-    color:#e5e7eb;
-    text-align:center;
-  }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f172a, #1e3a8a);
+    color: white;
+    text-align: center;
+}
 
-  body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
+.container {
+    padding: 60px 20px;
+}
 
-  .wrap{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-  }
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #60a5fa;
+}
 
-  h1{
-    font-size:64px;
-    margin-bottom:10px;
-    color:#60a5fa;
-  }
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
 
-  .tagline{
-    font-size:22px;
-    color:#94a3b8;
-    margin-bottom:35px;
-  }
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 28px;
+    background-color: #60a5fa;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
 
-  .btn{
-    display:inline-block;
-    padding:14px 26px;
-    border-radius:12px;
-    background:#60a5fa;
-    color:#020617;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
-    box-shadow:0 10px 25px rgba(96,165,250,.25);
-    transition:.2s;
-  }
+.button:hover {
+    background-color: #3b82f6;
+}
 
-  .btn:hover{
-    transform:translateY(-2px);
-    background:#3b82f6;
-  }
+.section {
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  .card{
-    margin-top:45px;
-    padding:28px;
-    border-radius:18px;
-    background: rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.1);
-  }
+.section h2 {
+    color: #60a5fa;
+}
 
-  .card h2{
-    margin-bottom:12px;
-    color:#60a5fa;
-  }
+.projects a,
+.contact a {
+    display: block;
+    margin: 10px;
+    color: #93c5fd;
+    text-decoration: none;
+}
 
-  .card p{
-    font-size:20px;
-    line-height:1.6;
-    color:#cbd5e1;
-  }
+.projects a:hover,
+.contact a:hover {
+    text-decoration: underline;
+}
 
-  footer{
-    margin-top:40px;
-    color:#64748b;
-    font-size:16px;
-  }
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+    color: #cbd5e1;
+}
 </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Charles Zufan</h1>
+
+<div class="subtitle">
+Computer Science Student • Backend Developer • Track Athlete
+</div>
+
+<a class="button" href="https://github.com/czoof" target="_blank">
+View My GitHub
+</a>
+
+<a class="button" href="Resume.pdf" target="_blank">
+View My Resume
+</a>
+
+<div class="section">
+<h2>About Me</h2>
+
+<p>
+I am a Senior Computer Science student at Saint Xavier University graduating May 2026. 
+I specialize in backend development, databases, and full-stack applications. 
+I enjoy building software, solving complex problems, and continuously improving my technical skills. 
+My goal is to become a professional software engineer and contribute to meaningful projects.
+</p>
+</div>
+
+<div class="section projects">
+<h2>My Projects</h2>
+
+<a href="https://github.com/czoof/Coding-Projects" target="_blank">
+Coding Projects Repository
+</a>
+
+<a href="https://github.com/czoof/Meal-Grocery-Planner" target="_blank">
+Meal Grocery Planner Project
+</a>
+
+<a href="https://github.com/czoof" target="_blank">
+View All GitHub Repositories
+</a>
+
+</div>
+
+<div class="section contact">
+<h2>Contact Information</h2>
+
+<a href="mailto:charleszufan@gmail.com">
+Email: charleszufan@gmail.com
+</a>
+
+<a href="https://www.linkedin.com/in/charles-zufan-2b39b0293/" target="_blank">
+LinkedIn Profile
+</a>
+
+<a href="https://github.com/czoof" target="_blank">
+GitHub Profile
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Charles Zufan
+</footer>
+
+</body>
+</html>

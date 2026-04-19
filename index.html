@@ -133,8 +133,50 @@ h1 {
     color: var(--text-main);
 }
 
+.meta-note {
+    margin-top: 10px;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+}
+
 .wide {
     grid-column: span 12;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.stack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stack-list li {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(147, 213, 255, 0.38);
+    background: rgba(9, 42, 79, 0.62);
+    color: #dcecff;
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.feedback-list {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.75;
+}
+
+.feedback-list li + li {
+    margin-top: 10px;
 }
 
 .list {
@@ -228,6 +270,11 @@ footer {
         padding: 22px;
     }
 
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
     .list {
         font-size: 1rem;
     }
@@ -243,8 +290,9 @@ footer {
 <p class="subtitle">Computer Science Student | Backend Developer | Track Athlete | Team Leader</p>
 <div class="hero-cta-row">
 <a class="button" href="https://github.com/czoof" target="_blank" rel="noopener noreferrer">View My GitHub Projects</a>
-<a class="button" href="New%20Software%20Engineering%20Resume.pdf" target="_blank" rel="noopener noreferrer">View Current Resume</a>
+<a class="button" href="New%20Software%20Engineering%20Resume.pdf" target="_blank" rel="noopener noreferrer">View Updated Resume</a>
 </div>
+<p class="meta-note">Resume updated for 2026 submissions and current project experience.</p>
 </section>
 
 <main class="grid">
@@ -258,10 +306,47 @@ I enjoy learning quickly, mentoring peers, and delivering reliable work under pr
 </p>
 </section>
 
+<section class="card wide">
+<h2>In-Class Project: CMPSC 390 Group Project</h2>
+<div class="project-grid">
+<div>
+<p>
+This project is a collaborative full-stack web application built during CMPSC 390.
+Our team focused on building a practical planning tool with clear navigation, persistent data handling, and a responsive interface for real-world use.
+I contributed to backend logic, data structure decisions, and cross-feature debugging during integration.
+</p>
+<div class="hero-cta-row" style="justify-content: flex-start; margin-top: 18px;">
+<a class="button" href="https://cmpsc390groupproject-production.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">Open Live App</a>
+</div>
+</div>
+<div>
+<h3 style="margin: 0 0 10px; color: #a9d2ff; font-family: 'Space Grotesk', sans-serif;">Tech Stack</h3>
+<ul class="stack-list">
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Node.js</li>
+<li>Express</li>
+<li>Railway</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="card wide">
+<h2>Class Feedback Applied</h2>
+<ul class="feedback-list">
+<li>Improved spacing and card layout so sections are clearer and less crowded.</li>
+<li>Increased distinction between clickable links and section headings for better readability.</li>
+<li>Expanded personal profile with leadership, teamwork, and student-athlete strengths.</li>
+<li>Added clear in-class project details: description, tech stack, and live application link.</li>
+</ul>
+</section>
+
 <section class="card">
 <h2>Featured Projects</h2>
 <ul class="list">
-<li><a href="https://cmpsc390groupproject-production.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">CMPSC 390 Group Project (Live)</a> - Active team project demonstrating new full-stack experience.</li>
+<li><a href="https://cmpsc390groupproject-production.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">CMPSC 390 Group Project (Live)</a> - Full details listed in the in-class project section above.</li>
 <li><a href="https://github.com/czoof/Coding-Projects" target="_blank" rel="noopener noreferrer">Coding Projects Repository</a> - Collection of class and independent work.</li>
 <li><a href="https://github.com/czoof/Meal-Grocery-Planner" target="_blank" rel="noopener noreferrer">Meal Grocery Planner</a> - Practical planning project with full-stack features.</li>
 </ul>

@@ -6,79 +6,210 @@
 <title>Charles Zufan Portfolio</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap');
+
+:root {
+    --bg-deep: #04152d;
+    --bg-mid: #0d315f;
+    --bg-card: rgba(7, 27, 53, 0.68);
+    --text-main: #ecf4ff;
+    --text-soft: #b9cde8;
+    --title-accent: #62b0ff;
+    --link-accent: #7df7d4;
+    --link-hover: #b6ffe9;
+    --button-top: #1f89ff;
+    --button-bottom: #1461f4;
+    --border: rgba(143, 187, 240, 0.26);
+    --shadow: 0 22px 48px rgba(0, 5, 18, 0.42);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e3a5f);
-    color: #e5e7eb;
-    text-align: center;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(97, 179, 255, 0.24), transparent 28%),
+        radial-gradient(circle at 82% 78%, rgba(76, 141, 255, 0.2), transparent 25%),
+        linear-gradient(140deg, var(--bg-deep), var(--bg-mid));
 }
 
 .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 56px 0 40px;
+}
+
+.hero {
+    border: 1px solid var(--border);
+    background: linear-gradient(165deg, rgba(15, 58, 108, 0.55), rgba(8, 29, 56, 0.8));
+    border-radius: 26px;
+    padding: 34px 26px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+    animation: rise 0.65s ease-out;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #60a5fa;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.1rem, 5.5vw, 3.6rem);
+    letter-spacing: 0.4px;
+    color: var(--title-accent);
 }
 
 .subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #cbd5e1;
+    margin: 14px auto 0;
+    max-width: 800px;
+    font-size: clamp(1rem, 2.3vw, 1.25rem);
+    color: var(--text-soft);
+}
+
+.hero-cta-row {
+    margin-top: 24px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .button {
-    display: inline-block;
-    margin: 20px 0;
-    padding: 14px 28px;
-    font-size: 18px;
-    color: white;
-    background: #3b82f6;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    font-weight: 700;
+    border-radius: 12px;
     text-decoration: none;
-    transition: 0.3s;
+    color: #f8fbff;
+    background: linear-gradient(180deg, var(--button-top), var(--button-bottom));
+    border: 1px solid rgba(175, 223, 255, 0.45);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
 }
 
-.button:hover {
-    background: #2563eb;
+.button:hover,
+.button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(16, 95, 214, 0.42);
+    filter: brightness(1.07);
+    outline: none;
 }
 
-.section {
-    margin-top: 50px;
+.grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 16px;
 }
 
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: #60a5fa;
+.card {
+    grid-column: span 6;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    animation: rise 0.7s ease-out;
 }
 
-.section p {
-    font-size: 18px;
+.card h2 {
+    margin: 0 0 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.55rem;
+    color: var(--title-accent);
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.68;
+    color: var(--text-main);
+}
+
+.wide {
+    grid-column: span 12;
+}
+
+.list {
+    margin: 0;
+    padding-left: 18px;
     line-height: 1.6;
 }
 
-.links a {
-    display: block;
-    color: #93c5fd;
-    margin: 6px 0;
-    text-decoration: none;
+.list li + li {
+    margin-top: 7px;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.list a {
+    color: var(--link-accent);
+    font-weight: 700;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: color 0.2s ease;
+}
+
+.list a:hover,
+.list a:focus-visible {
+    color: var(--link-hover);
+}
+
+.links {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.links a {
+    color: var(--link-accent);
+    font-weight: 700;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+    color: var(--link-hover);
+}
+
+.contact-card {
+    grid-column: span 12;
+    max-width: 520px;
+    justify-self: center;
+    text-align: center;
+}
+
+.contact-card .links {
+    justify-items: center;
 }
 
 footer {
-    margin-top: 60px;
-    padding: 20px;
-    font-size: 14px;
-    color: #94a3b8;
+    margin-top: 20px;
+    text-align: center;
+    color: #93b7de;
+    font-size: 0.92rem;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        grid-column: span 12;
+    }
 }
 </style>
 
@@ -86,72 +217,53 @@ footer {
 <body>
 
 <div class="container">
-
+<section class="hero">
 <h1>Charles Zufan</h1>
+<p class="subtitle">Computer Science Student | Backend Developer | Track Athlete | Team Leader</p>
+<div class="hero-cta-row">
+<a class="button" href="https://github.com/czoof" target="_blank" rel="noopener noreferrer">View My GitHub Projects</a>
+<a class="button" href="New%20Software%20Engineering%20Resume.pdf" target="_blank" rel="noopener noreferrer">View Current Resume</a>
+</div>
+</section>
 
-<p class="subtitle">
-Computer Science Student • Backend Developer • Track Athlete
-</p>
-
-<a class="button" href="https://github.com/czoof" target="_blank">
-View My GitHub Projects
-</a>
-
-<div class="section">
+<main class="grid">
+<section class="card wide">
 <h2>About Me</h2>
-
 <p>
 I am a Senior Computer Science student at Saint Xavier University graduating May 2026.
-I focus on backend development, databases, and building full-stack applications.
-I enjoy solving complex problems, learning new technologies, and continuously improving my skills.
-My goal is to become a professional software engineer and contribute to meaningful projects.
+I focus on backend development, databases, and full-stack systems that solve practical problems.
+Outside of programming, I bring discipline and consistency from track athletics, plus leadership and communication skills from collaborating with teammates on long-running projects.
+I enjoy learning quickly, mentoring peers, and delivering reliable work under pressure.
 </p>
+</section>
 
-</div>
+<section class="card">
+<h2>Featured Projects</h2>
+<ul class="list">
+<li><a href="https://cmpsc390groupproject-production.up.railway.app/index.html" target="_blank" rel="noopener noreferrer">CMPSC 390 Group Project (Live)</a> - Active team project demonstrating new full-stack experience.</li>
+<li><a href="https://github.com/czoof/Coding-Projects" target="_blank" rel="noopener noreferrer">Coding Projects Repository</a> - Collection of class and independent work.</li>
+<li><a href="https://github.com/czoof/Meal-Grocery-Planner" target="_blank" rel="noopener noreferrer">Meal Grocery Planner</a> - Practical planning project with full-stack features.</li>
+</ul>
+</section>
 
-<div class="section">
-<h2>Projects</h2>
+<section class="card">
+<h2>Skills and Experience</h2>
+<ul class="list">
+<li>Backend development, APIs, relational databases, and debugging complex logic.</li>
+<li>Project collaboration using GitHub, version control workflows, and code reviews.</li>
+<li>Time management and resilience built from being a student-athlete.</li>
+<li>Communication, leadership, and accountability in group projects and team settings.</li>
+</ul>
+</section>
 
-<div class="links">
-
-<a href="https://github.com/czoof/Coding-Projects" target="_blank">
-Coding Projects Repository
-</a>
-
-<a href="https://github.com/czoof/Meal-Grocery-Planner" target="_blank">
-Meal Grocery Planner Project
-</a>
-
-</div>
-
-</div>
-
-<div class="section">
+<section class="card contact-card">
 <h2>Contact</h2>
-
 <div class="links">
-
-<a href="mailto:charleszufan15z@gmail.com">
-charleszufan15z@gmail.com
-</a>
-
-<a href="https://www.linkedin.com/in/charles-zufan-2b39b0293/" target="_blank">
-LinkedIn Profile
-</a>
-
+<a href="mailto:charleszufan15z@gmail.com">charleszufan15z@gmail.com</a>
+<a href="https://www.linkedin.com/in/charles-zufan-2b39b0293/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
 </div>
-
-</div>
-
-<div class="section">
-<h2>Resume</h2>
-
-<a class="button" href="Resume.pdf" target="_blank">
-Download My Resume
-</a>
-
-</div>
-
+</section>
+</main>
 </div>
 
 <footer>

@@ -212,15 +212,17 @@ h1 {
     color: var(--link-hover);
 }
 
-.contact-card {
-    grid-column: span 12;
-    max-width: 620px;
-    justify-self: center;
+.hero-contact {
+    margin-top: 18px;
     text-align: center;
 }
 
-.contact-card .links {
-    justify-items: center;
+.hero-contact .links {
+    margin-top: 0;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -265,6 +267,10 @@ footer {
         gap: 18px;
     }
 
+    .hero-contact .links {
+        gap: 12px;
+    }
+
     .list {
         font-size: 1rem;
     }
@@ -281,6 +287,12 @@ footer {
 <div class="hero-cta-row">
 <a class="button" href="https://github.com/czoof" target="_blank" rel="noopener noreferrer">View My GitHub Projects</a>
 <a class="button" href="New%20Software%20Engineering%20Resume.pdf" target="_blank" rel="noopener noreferrer">View Updated Resume</a>
+</div>
+<div class="hero-contact">
+<div class="links">
+<a href="mailto:charleszufan15z@gmail.com">charleszufan15z@gmail.com</a>
+<a href="https://www.linkedin.com/in/charles-zufan-2b39b0293/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+</div>
 </div>
 </section>
 
@@ -336,13 +348,6 @@ Legacy Auto is a vehicle web application that allows users to create accounts, l
 </ul>
 </section>
 
-<section class="card contact-card">
-<h2>Contact</h2>
-<div class="links">
-<a href="mailto:charleszufan15z@gmail.com">charleszufan15z@gmail.com</a>
-<a href="https://www.linkedin.com/in/charles-zufan-2b39b0293/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-</div>
-</section>
 </main>
 </div>
 
